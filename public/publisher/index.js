@@ -23,7 +23,7 @@ async function handleNegotiationNeededEvent(peer) {
     const offer = await peer.createOffer();
     await peer.setLocalDescription(offer);
 
-    const { data } = await axios.post('http://localhost:9999/broadcast', { sdp: peer.localDescription });
+    const { data } = await axios.post('/broadcast', { sdp: peer.localDescription });
     console.log(data.sdp.sdp?.split("\n")[8]);
     console.log(data.sdp.sdp?.split("\n")[9]);
     console.log(data.sdp.sdp?.split("\n")[1]);
