@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "start": "nodemon --legacy-watch server.js"
+    "dev": "nodemon --legacy-watch server.js",
+    "start": "node server.js"
   },
   "dependencies": {
     "body-parser": "^1.19.0",
